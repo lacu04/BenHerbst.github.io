@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin Herbst | Mechatronics Engineer, Tracking and Autonomous Systems</title>
+  <meta name="description" content="Benjamin Herbst is a mechatronics engineering student at Texas A&M University. Precision pointing and tracking, autonomous systems, embedded firmware, and Pantex-sponsored materials research.">
+  <meta property="og:title" content="Benjamin Herbst | Mechatronics Engineering">
+  <meta property="og:description" content="Precision tracking, autonomy, and embedded systems from a mechatronics student at Texas A&M.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#EEF0ED">
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#focus">Skip to content</a>
+
+  <header class="bar">
+    <a class="bar-name" href="#top">Benjamin Herbst</a>
+    <nav aria-label="Primary">
+      <a href="#focus">Focus areas</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Benjamin<br>Herbst</h1>
+        <p class="lede">Mechatronics engineering student at Texas A&amp;M. I build tracking, autonomous, and embedded systems, and I research how polyurethane tooling ages for a Pantex-sponsored project.</p>
+        <p class="avail">B.S. Mechatronics Engineering, expected May 2027</p>
+        <p class="hero-links">
+          <a class="btn" href="Ben_Herbst_Resume.pdf">Download resume (PDF)</a>
+          <a href="#contact">Get in touch</a>
+        </p>
+      </div>
+
+      <figure class="stage" id="stage">
+        <svg id="sky" viewBox="0 0 480 440" role="img" aria-label="Animated polar sky plot. A simulated mount slews to acquire a target, then follows it across the sky. Moving your pointer over the plot steers the target.">
+          <circle cx="240" cy="215" r="190" class="horizon"/>
+          <circle cx="240" cy="215" r="126.67" class="ring"/>
+          <circle cx="240" cy="215" r="63.33" class="ring"/>
+          <line x1="240" y1="25" x2="240" y2="405" class="ring"/>
+          <line x1="50" y1="215" x2="430" y2="215" class="ring"/>
+          <circle cx="240" cy="215" r="2.5" class="zenith"/>
+          <text x="240" y="15" text-anchor="middle" class="cardinal">N</text>
+          <text x="240" y="432" text-anchor="middle" class="cardinal">S</text>
+          <text x="452" y="220" text-anchor="middle" class="cardinal">E</text>
+          <text x="28" y="220" text-anchor="middle" class="cardinal">W</text>
+          <text x="246" y="92" class="elev">30°</text>
+          <text x="246" y="155" class="elev">60°</text>
+          <path id="pass" class="pass"/>
+          <path id="trail" class="trail"/>
+          <g id="target" class="target"><circle r="11" class="t-ring"/><circle r="4.5" class="t-dot"/></g>
+          <g id="mount" class="mount">
+            <circle r="13"/>
+            <line x1="-20" y1="0" x2="-7" y2="0"/><line x1="7" y1="0" x2="20" y2="0"/>
+            <line x1="0" y1="-20" x2="0" y2="-7"/><line x1="0" y1="7" x2="0" y2="20"/>
+          </g>
+        </svg>
+        <figcaption>
+          <span class="readout" aria-hidden="true">
+            <span>Azimuth <b id="r-az">0</b>°</span>
+            <span>Elevation <b id="r-el">0</b>°</span>
+            <span>Pointing error <b id="r-err">0.0</b>°</span>
+            <span class="status" id="r-status">Slewing</span>
+          </span>
+          <button type="button" id="toggle" class="toggle" aria-pressed="false">Pause demo</button>
+          <span class="note">A simulation of slew-and-follow tracking: the circle is the mount, the dot is a simulated satellite pass. Move your pointer over the plot to steer the target yourself. This is not data from my telescope system.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Focus areas -->
+    <section class="sec" id="focus" aria-labelledby="h-focus">
+      <h2 id="h-focus" class="rail">Focus areas</h2>
+      <div class="body">
+        <dl class="skills focus">
+          <div>
+            <dt>Precision pointing and tracking</dt>
+            <dd>An Arduino stepper-motor tuning system that holds a telescope within 0.09° of its target, with a Raspberry Pi automating slew-and-follow.</dd>
+          </div>
+          <div>
+            <dt>Autonomy and sensing</dt>
+            <dd>A LiDAR and computer-vision robot that finds and retrieves a soda can by color, and a Raspberry Pi that uses onboard sensors and path planning to run a maze on its own.</dd>
+          </div>
+          <div>
+            <dt>Modeling and simulation</dt>
+            <dd>A custom multibody simulation of a 4-degree-of-freedom finger, plus software that compares the physical hardware against it to drive design changes.</dd>
+          </div>
+          <div>
+            <dt>Embedded firmware</dt>
+            <dd>ARM assembly on an STM32 for a timing-based Morse code trainer, along with Arduino, Raspberry Pi, UART, and PCB design work.</dd>
+          </div>
+          <div>
+            <dt>Materials and lifetime prediction</dt>
+            <dd>Accelerated aging experiments and a data-driven framework for predicting how long polyurethane tooling lasts under variable storage conditions.</dd>
+          </div>
+          <div>
+            <dt>Radar data and machine learning</dt>
+            <dd>Machine learning over radar data to flag dangerous storms, with a custom danger score for each flagged area.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="sec" id="research" aria-labelledby="h-research">
+      <h2 id="h-research" class="rail">Research</h2>
+      <div class="body">
+        <article class="entry">
+          <p class="when">Aug 2026 – Present</p>
+          <div>
+            <h3>Undergraduate Researcher</h3>
+            <p class="meta">Pantex and Texas A&amp;M University, with Dr. Congrui Jin</p>
+            <p class="entry-title">Predictive Lifetime Modeling of Polyurethane Tooling Under Variable Environmental Exposure</p>
+            <ul>
+              <li>Supporting a Pantex-sponsored project that is building a data-driven framework to predict how long polyurethane tools last under variable storage conditions.</li>
+              <li>Assisting with accelerated aging experiments and material characterization to measure the degradation caused by hydrolysis and thermo-oxidation.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="sec" id="projects" aria-labelledby="h-projects">
+      <h2 id="h-projects" class="rail">Projects</h2>
+      <div class="body">
+
+                <article class="proj feature">
+          <figure class="photo" data-src="images/telescope-tracking.jpg">
+            <img src="images/telescope-tracking.jpg" alt="The automated telescope tracking system" loading="lazy">
+            <figcaption>Add a photo: images/telescope-tracking.jpg</figcaption>
+          </figure>
+          <div class="proj-text">
+            <h3>Automated Telescope Tracking System</h3>
+            <p class="meta">May 2026 – Present</p>
+            <ul>
+              <li>Built a stepper-motor tuning system on an Arduino that keeps tracking within 0.09° of the target.</li>
+              <li>Automated slew-and-follow by connecting a Raspberry Pi to the existing telescope tracking software.</li>
+              <li>Assembled a display that shows positional data in real time.</li>
+            </ul>
+            <p class="tools">Arduino, Raspberry Pi, UART, IoT</p>
+          </div>
+        </article>
+
+        <article class="proj feature">
+          <figure class="photo" data-src="images/robotic-finger.jpg">
+            <img src="images/robotic-finger.jpg" alt="The 4-degree-of-freedom robotic finger with splay motion" loading="lazy">
+            <figcaption>Add a photo: images/robotic-finger.jpg</figcaption>
+          </figure>
+          <div class="proj-text">
+            <h3>Robotic Finger with Splay</h3>
+            <p class="meta">Aug 2025 – Dec 2025</p>
+            <ul>
+              <li>Engineered and built a 4-degree-of-freedom mechatronic finger with splay motion.</li>
+              <li>Modeled the joint kinematics in a custom multibody simulation.</li>
+              <li>Wrote motion-analysis software that compares the physical finger with the simulation, so each result feeds the next design revision.</li>
+            </ul>
+            <p class="tools">Solidworks, MATLAB/Simulink</p>
+          </div>
+        </article>
+
+        <div class="proj-grid">
+          <article class="proj">
+            <figure class="photo" data-src="images/soda-can-robot.jpg">
+              <img src="images/soda-can-robot.jpg" alt="The soda can grabber robot" loading="lazy">
+              <figcaption>Add a photo: images/soda-can-robot.jpg</figcaption>
+            </figure>
+            <h3>Soda Can Grabber Robot</h3>
+            <p class="meta">Jan 2026 – May 2026</p>
+            <p>A robot that navigates a space on its own and retrieves a soda can, finding it by color.</p>
+            <p class="tools">Python, Raspberry Pi, Computer Vision, LiDAR</p>
+          </article>
+
+          <article class="proj">
+            <figure class="photo" data-src="images/weather-alert.jpg">
+              <img src="images/weather-alert.jpg" alt="Radar analysis output from the weather alert system" loading="lazy">
+              <figcaption>Add a photo: images/weather-alert.jpg</figcaption>
+            </figure>
+            <h3>Weather Alert System</h3>
+            <p class="meta">May 2026 – Present</p>
+            <p>Machine learning over radar data to flag dangerous storm conditions, plus a custom algorithm that gives each flagged area a danger score.</p>
+            <p class="tools">Python, Machine Learning</p>
+          </article>
+
+          <article class="proj">
+            <figure class="photo" data-src="images/mechanical-hand.jpg">
+              <img src="images/mechanical-hand.jpg" alt="The tendon-driven mechanical hand" loading="lazy">
+              <figcaption>Add a photo: images/mechanical-hand.jpg</figcaption>
+            </figure>
+            <h3>Mechanical Hand</h3>
+            <p class="meta">Jan 2025 – May 2025</p>
+            <p>A tendon-driven finger mechanism, modeled in Solidworks for a reliable grab. A Raspberry Pi program uses onboard sensors and path planning to navigate a maze and deliver a block within 2 minutes.</p>
+            <p class="tools">Solidworks, Python, Raspberry Pi</p>
+          </article>
+
+          <article class="proj">
+            <figure class="photo" data-src="images/morse-trainer.jpg">
+              <img src="images/morse-trainer.jpg" alt="The Morse code trainer game on an STM32 board" loading="lazy">
+              <figcaption>Add a photo: images/morse-trainer.jpg</figcaption>
+            </figure>
+            <h3>Morse Code Trainer Game</h3>
+            <p class="meta">Aug 2025 – Dec 2025</p>
+            <p>An interactive Morse code trainer written in ARM assembly. Timing logic turns button presses into Morse sequences, and binary-encoded validation checks each answer.</p>
+            <p class="tools">ARM Assembly, STM32</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="sec" id="leadership" aria-labelledby="h-lead">
+      <h2 id="h-lead" class="rail">Leadership</h2>
+      <div class="body">
+        <article class="entry">
+          <p class="when">Nov 2025 – May 2026</p>
+          <div>
+            <h3>Competition Lead, HAND Dexterous Design Challenge</h3>
+            <p class="meta">Texas A&amp;M University, HAND ERC</p>
+            <ul>
+              <li>Led planning and execution of a 120-participant student competition on dexterous robotic hand design and control.</li>
+              <li>Coordinated the technical scope, rules, evaluation criteria, and event logistics.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="entry">
+          <p class="when">Apr 2025 – Present</p>
+          <div>
+            <h3>Founder and Treasurer, ASME-Tech</h3>
+            <p class="meta">Texas A&amp;M University</p>
+            <ul>
+              <li>Founded a technical student organization where engineering students can build connections and experience.</li>
+              <li>Manage the organization's logistics, finances, and budgets.</li>
+              <li>Established an open makerspace and organized technical workshops for members.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section class="sec" id="background" aria-labelledby="h-bg">
+      <h2 id="h-bg" class="rail">Background</h2>
+      <div class="body">
+        <article class="entry">
+          <p class="when">Expected May 2027</p>
+          <div>
+            <h3>Texas A&amp;M University</h3>
+            <p class="meta">B.S. Mechatronics Engineering, GPA 3.4</p>
+          </div>
+        </article>
+        <dl class="skills">
+          <div><dt>CAD and design</dt><dd>Solidworks, Autodesk Inventor, Onshape, Bambu Studio, Ultimaker Cura</dd></div>
+          <div><dt>Prototyping and fabrication</dt><dd>3D printing, Arduino, Raspberry Pi, STM32, PCB design, soldering, LiDAR</dd></div>
+          <div><dt>Programming</dt><dd>Python, MATLAB, C++, C, ARM Assembly, R, Shell, Linux</dd></div>
+          <div><dt>Simulation and analysis</dt><dd>MATLAB/Simulink, multibody simulation, data analysis, statistical analysis in R, Multisim, OrCAD X</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="sec contact" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact" class="rail">Contact</h2>
+      <div class="body">
+        <p class="contact-lede">Building something that has to point, track, or move? Send me a note.</p>
+        <p class="contact-links">
+          <a href="mailto:herbstben21@gmail.com">herbstben21@gmail.com</a><br>
+          <a href="https://www.linkedin.com/in/benjherbst/" rel="noopener">linkedin.com/in/benjherbst</a><br>
+          <a href="Ben_Herbst_Resume.pdf">Resume (PDF)</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Benjamin Herbst, College Station, Texas</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
